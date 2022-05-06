@@ -1,0 +1,110 @@
+.image-modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-content {
+    flex-direction: column;
+    width: 40%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 4em;
+}
+
+.image-modal-close-button {
+    background-image: url("../images/icon-close.svg");
+    padding: 0.5em;
+    transform: scale(1.25);
+    background-repeat: no-repeat;
+    position: relative;
+    align-self: flex-end;
+    display: block;
+}
+
+.image-modal-close-button:hover {
+    background-image: url('data:image/svg+xml; utf8, <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="%23FF7D1A" fill-rule="evenodd"/></svg>')
+}
+
+.image-modal-slideshow-container {
+    margin-top: 2em;
+    display: block;
+    position: relative;
+}
+
+.image-modal-slides-image {
+    border-radius: 16px;
+    opacity: 1;
+}
+
+.image-modal-slideshow-prev,
+.image-modal-slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 3em;
+    font-size: 0.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.image-modal-slideshow-prev {
+    background-image: url("../images/icon-previous.svg");
+    left: -3.5em;
+}
+
+.image-modal-slideshow-next {
+    background-image: url("../images/icon-next.svg");
+    right: -3.5em;
+}
+
+.image-modal-slideshow-prev:hover {
+    background-image: url('data:image/svg+xml; utf8, <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="%23FF7D1A" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>');
+}
+.image-modal-slideshow-next:hover {
+    background-image: url('data:image/svg+xml; utf8, <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="%23FF7D1A" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>');
+}
+
+.image-modal-slides-div {
+    display: none
+}
+
+.image-modal-thumbnail-container {
+    position: relative;
+    flex-direction: row;
+    margin: 2em 2em 0 2em;
+}
+
+.image-modal-thumbnail-div {
+    width: 100%;
+    cursor: pointer;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+
+.image-modal-thumbnail-div  + .image-modal-thumbnail-div {
+    margin-left: 2em;
+}
+
+.image-modal-thumbnail {
+    border-radius: 16px;
+}
+
+.image-modal-thumbnail:hover {
+    opacity: 0.7;
+}
+
+@media (min-width:1441px) and (max-width:1920px) {
+    .image-modal-content { 
+        width: 30%;
+    }
+}

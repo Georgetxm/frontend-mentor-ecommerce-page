@@ -1,7 +1,26 @@
 .container {
-  padding: 0 2rem;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
 }
 
+@media (min-width: 768px)  {
+  .container {
+    width: 95%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+/* 
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -113,4 +132,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

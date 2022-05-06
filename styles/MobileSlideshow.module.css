@@ -1,0 +1,32 @@
+.mobile-slideshow-container {
+    /* width: 100%; */
+    position: relative;
+    max-width: 1440px;
+}
+
+.mobile-image-slides {
+    display: none;
+}
+
+.mobile-slideshow-prev,
+.mobile-slideshow-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 2em;
+    font-size: 0.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.mobile-slideshow-next {
+    background-image: url("../images/icon-next.svg");
+    right: 1.5em;
+}
+
+.mobile-slideshow-prev {
+    background-image: url("../images/icon-previous.svg");
+    left: 1.5em;
+}
