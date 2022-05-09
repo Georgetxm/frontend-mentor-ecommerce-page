@@ -40,7 +40,7 @@ Desktop Site            |  Mobile Site
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Georgetxm/frontend-mentor-ecommerce-page)
-- Live Site URL: [Vercel App](https://sunnyside-agency-i3d12cbca-georgetxm.vercel.app/)
+- Live Site URL: [Vercel App](https://frontend-mentor-ecommerce-page-jimjr3e0j-georgetxm.vercel.app/)
 
 ## My process
 
