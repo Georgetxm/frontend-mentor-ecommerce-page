@@ -6,6 +6,8 @@ import navStyles from "../styles/Nav.module.css";
 import avatarPic from "../images/image-avatar.png";
 import cartIcon from "../images/icon-cart.svg";
 import CartDropDown from "./CartDropDown";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCart, selectAllCarts } from "../features/cart/cartSlice";
 
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -35,6 +37,16 @@ const useMediaQuery = (width) => {
 const Nav = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [showCart, setShowCart] = useState(false);
+
+  const dispatch = useDispatch();
+  const cart = useSelector(selectAllCarts);
+  const cartStatus = useSelector((state) => state.cart.status);
+
+  useEffect(() => {
+    if (cartStatus === "idle") {
+      dispatch(fetchCart());
+    }
+  }, [cartStatus, dispatch]);
 
   let isBreakPoint = useMediaQuery(768);
 
@@ -176,14 +188,20 @@ const Nav = () => {
       </div>
       <div className={`${navStyles["right-header-div"]} flex`}>
         <div className={`${navStyles["cart-button"]}`}>
+          {cart &&
+          Object.keys(cart).length !== 0 &&
+          Object.getPrototypeOf(cart) === Object.prototype ? (
+            <span className={`${navStyles["cart-button__badge"]}`}>
+              {cart.quantity}
+            </span>
+          ) : (
+            <></>
+          )}
           <Image
             onClick={() => {
-              if (!isBreakPoint) {
-                setShowCart(!showCart);
-              }
+              setShowCart(!showCart);
             }}
-            onMouseEnter={() => setShowCart(true)}
-            onMouseLeave={() => setShowCart(false)}
+            onMouseOver={() => setShowCart(!showCart)}
             alt={`cart icon`}
             src={cartIcon}
             layout={`responsive`}
@@ -197,7 +215,7 @@ const Nav = () => {
           />
         </div>
       </div>
-      {showCart ? <CartDropDown /> : <></>}
+      {showCart ? <CartDropDown cart={cart} /> : <></>}
     </header>
   );
 };

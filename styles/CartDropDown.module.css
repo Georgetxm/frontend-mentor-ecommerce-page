@@ -69,6 +69,13 @@
     display: inline-block;
 }
 
+
+.cart-item__delete-button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
 .cart-item__checkout-button {
     margin-top: 1em;
     background-color: var(--primary-orange);
