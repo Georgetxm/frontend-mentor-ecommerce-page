@@ -1,4 +1,5 @@
 import React from "react";
+import { Attribution } from "./Attribution";
 import Meta from "./Meta";
 import Nav from "./Nav";
 
@@ -9,6 +10,7 @@ const Layout = ({ children, cart, setCart }) => {
       <Nav cart={cart} />
       <div>
         <main>{children}</main>
+        <Attribution />
       </div>
     </>
   );
