@@ -40,7 +40,7 @@ Desktop Site            |  Mobile Site
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Georgetxm/frontend-mentor-ecommerce-page)
-- Live Site URL: [Vercel App](https://sunnyside-agency-i3d12cbca-georgetxm.vercel.app/)
+- Live Site URL: [Vercel App](https://frontend-mentor-ecommerce-page-jimjr3e0j-georgetxm.vercel.app/)
 
 ## My process
 
@@ -56,24 +56,6 @@ Desktop Site            |  Mobile Site
 ### What I learned
 
 Everything about Nextjs, the server-side-rendering, project structure, styling best practices.
-
-```css
-.about { 
-  display: grid;
-  grid-template-areas:
-    "transform-image",
-    "..."
-}
-
-.about__items:nth-child(1) {
-  grid-area: transform-image;
-}
-...
-.about__items:nth-child(6) {
-  grid-area: photography;
-}
-
-```
 
 Creating a Modal for the Mobile Navigation from scratch in React by combining CSS, a custom hook and React's useEffect to read the screen sizes.
 
